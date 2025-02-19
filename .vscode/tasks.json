@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build OpenGL Project",
+            "type": "shell",
+            "command": "C:/msys64/ucrt64/bin/g++.exe",
+            "args": [
+                "-g",
+                "-I", "C:/msys64/ucrt64/include",
+                "./src/main.cpp",
+                "./src/glad.c",
+                "-o", "./bin/main.exe",
+                "-L", "C:/msys64/ucrt64/lib",
+                "-lglfw3",
+                "-lopengl32"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
